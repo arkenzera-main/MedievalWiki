@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Medieval RP - Clã Dolmur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap');
+        
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+        
+        .body-font {
+            font-family: 'MedievalSharp', cursive;
+        }
+        
+        .parchment-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+            background-color: #f5e7c8;
+        }
+        
+        .blood-red {
+            color: #8b0000;
+        }
+        
+        .ice-blue {
+            color: #e1f5fe;
+        }
+        
+        .frost-border {
+            border-image: linear-gradient(to right, #e1f5fe, #8b0000) 1;
+            border-width: 3px;
+            border-style: solid;
+        }
+        
+        .glow-effect {
+            text-shadow: 0 0 10px rgba(225, 245, 254, 0.7);
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="parchment-bg body-font text-gray-800">
+    <!-- Header with Navigation -->
+    <header class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="title-font text-xl md:text-2xl blood-red">
+                <i class="fas fa-shield-alt mr-2"></i> Wiki Medieval RP
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-red-400 transition">Fações</a>
+                <a href="#" class="hover:text-red-400 transition">Locais</a>
+                <a href="#" class="hover:text-red-400 transition">História</a>
+                <a href="#" class="hover:text-red-400 transition">Regras</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- Clan Header -->
+        <section class="mb-12 text-center fade-in">
+            <h1 class="title-font text-4xl md:text-6xl mb-4 blood-red">Clã Dolmur</h1>
+            <div class="frost-border p-4 bg-black bg-opacity-70 text-white rounded-lg">
+                <p class="body-font text-lg md:text-xl ice-blue">
+                    "Os Brutos das Neves - Guerreiros da Dama Branca"
+                </p>
+            </div>
+        </section>
+
+        <!-- Clan Symbol -->
+        <div class="flex justify-center mb-12 floating">
+            <div class="relative">
+                <div class="w-32 h-32 md:w-48 md:h-48 bg-white rounded-full flex items-center justify-center shadow-xl border-4 border-red-800">
+                    <i class="fas fa-skull text-5xl md:text-7xl text-gray-800"></i>
+                </div>
+                <div class="absolute -bottom-4 -right-4 bg-white rounded-full p-2 border-2 border-red-800">
+                    <i class="fas fa-snowflake text-2xl text-blue-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="flex border-b border-gray-300 mb-8">
+            <button class="tab-button py-2 px-4 border-b-2 border-red-800 font-medium" data-tab="history">História</button>
+            <button class="tab-button py-2 px-4 text-gray-600" data-tab="culture">Cultura</button>
+            <button class="tab-button py-2 px-4 text-gray-600" data-tab="recruitment">Recrutamento</button>
+            <button class="tab-button py-2 px-4 text-gray-600" data-tab="relations">Relações</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tab-content" id="history">
+            <section class="mb-12 bg-white bg-opacity-80 p-6 rounded-lg shadow-lg">
+                <h2 class="title-font text-2xl md:text-3xl mb-4 blood-red">A Lenda da Dama de Branco</h2>
+                <div class="body-font text-lg space-y-4">
+                    <p>
+                        Décadas, talvez séculos, após a chegada, quando os descendentes [REDACTED] estavam à beira da extinção, uma figura misteriosa interveio. Conhecida apenas como a "Dama de Branco", ela apareceu em visões para o líder da tribo da época.
+                    </p>
+                    <p>
+                        A Dama de Branco o instruiu a levar seu povo para as regiões nevadas do norte de Nornheim, prometendo um refúgio contra a vida selvagem mais perigosa. O líder, desesperado, compartilhou sua visão, mas muitos duvidaram. Apenas um pequeno grupo, os mais desesperados ou os mais fiéis, o seguiu para as terras geladas.
+                    </p>
+                    <div class="flex justify-center my-6">
+                        <div class="w-full md:w-3/4 bg-black text-white p-4 rounded-lg border-l-4 border-red-800">
+                            <p class="italic ice-blue">
+                                "A promessa da Dama se cumpriu parcialmente: a vida selvagem nas terras nevadas era de fato menos agressiva, mais fácil de caçar ou evitar. No entanto, o frio era um inimigo ainda mais letal."
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        Presos entre a fome e o congelamento, o grupo parecia condenado. Foi então que a Dama de Branco apareceu novamente ao líder, guiando-o através de uma nevasca até uma caverna oculta. Dentro, pulsando com um calor suave e constante, estava a "Pedra de Fogo" (Fjörsteinn na língua tribal).
+                    </p>
+                    <p>
+                        Esta pedra mística irradiava um calor que não queimava, mas que era suficiente para afastar o frio mortal das terras nevadas. O líder levou a pedra de volta para seu povo, e ela se tornou o centro de seu novo lar, permitindo que sobrevivessem e, eventualmente, prosperassem naquele ambiente inóspito.
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-white bg-opacity-80 p-6 rounded-lg shadow-lg">
+                <h2 class="title-font text-2xl md:text-3xl mb-4 blood-red">Os Dolmurs Atuais</h2>
+                <div class="body-font text-lg space-y-4">
+                    <p>
+                        Os séculos de isolamento e luta pela sobrevivência transformaram os descendentes dos [REDACTED] em algo completamente diferente: os Dolmurs. Eles se tornaram uma tribo de guerreiros e caçadores fortes, brutais e desconfiados de forasteiros.
+                    </p>
+                    <p>
+                        A sofisticação de seus ancestrais foi substituída por uma praticidade rude e uma visão de mundo simplista. Eles são frequentemente descritos como "burros" ou "brutos" por outras facções, pois perderam a capacidade de comunicação complexa e valorizam a força física acima de tudo.
+                    </p>
+                    <p>
+                        Adotaram a Dama de Branco (ou Dama da Neve, como a chamam) como sua única divindade e a Cabeça de Alce Branca como seu símbolo sagrado.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content hidden" id="culture">
+            <section class="mb-8 bg-white bg-opacity-80 p-6 rounded-lg shadow-lg">
+                <h2 class="title-font text-2xl md:text-3xl mb-4 blood-red">Estrutura Social</h2>
+                <div class="body-font text-lg space-y-4">
+                    <p>
+                        Os Dolmurs são organizados em clãs vagamente conectados, cada um liderado por um Chefe de Guerra (para assuntos marciais) e um Xamã (para assuntos espirituais e rituais).
+                    </p>
+                    <p>
+                        Existe um Grão-Dolmur geralmente o chefe mais forte ou o xamã mais respeitado, que detém autoridade suprema, embora raramente intervenha nos assuntos dos clãs individuais.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-8 bg-white bg-opacity-80 p-6 rounded-lg shadow-lg">
+                <h2 class="title-font text-2xl md:text-3xl mb-4 blood-red">Tradições e Crenças</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black bg-opacity-70 text-white p-4 rounded-lg border-l-4 border-red-800">
+                        <h3 class="title-font text-xl ice-blue mb-2">Ritual de Iniciação</h3>
+                        <p class="body-font">
+                            Uma bênção ritualística concedida pelo Xamã, que pode envolver pintura facial com cinzas e sangue, tatuagens tribais feitas com ossos afiados, ou escarificações rituais.
+                        </p>
+                    </div>
+                    <div class="bg-black bg-opacity-70 text-white p-4 rounded-lg border-l-4 border-red-800">
+                        <h3 class="title-font text-xl ice-blue mb-2">Tabu Absoluto</h3>
+                        <p class="body-font">
+                            Adorar qualquer entidade que não seja a Dama da Neve; Recusar um duelo direto (considerado o cúmulo da covardia).
+                        </p>
+                    </div>
+                    <div class="bg-black bg-opacity-70 text-white p-4 rounded-lg border-l-4 border-red-800">
+                        <h3 class="title-font text-xl ice-blue mb-2">Costume Exótico</h3>
+                        <p class="body-font">
+                            Uso frequente de plantas e cogumelos alucinógenos encontrados nas cavernas aquecidas pela Pedra de Fogo para entrar em transe, comunicar-se com espíritos (ou assim acreditam) ou simplesmente para recreação.
+                        </p>
+                    </div>
+                    <div class="bg-black bg-opacity-70 text-white p-4 rounded-lg border-l-4 border-red-800">
+                        <h3 class="title-font text-xl ice-blue mb-2">Maior Medo</h3>
+                        <p class="body-font">
+                            Fantasmas e Mortos-Vivos. Têm um pavor profundo de espíritos inquietos e cadáveres reanimados, vendo-os como a maior abominação contra o ciclo natural.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white bg-opacity-80 p-6 rounded-lg shadow-lg">
+                <h2 class="title-font text-2xl md:text-3xl mb-4 blood-red">Aparência e Estilo</h2>
+                <div class="body-font text-lg space-y-4">
+                    <p>
+                        Valorizam troféus de caça, especialmente espinhos, presas e caveiras, que usam como adornos. O tamanho físico e a força bruta são altamente respeitados.
+                    </p>
+                    <p>
+                        Suas vestimentas são predominantemente feitas de peles e couros em tons de preto e branco, refletindo o ambiente nevado.
+                    </p>
+                    <div class="flex justify-center mt-6">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-gray-200 p-2 rounded-lg flex flex-col items-center">
+                                <i class="fas fa-hat-cowboy text-4xl text-gray-700 mb-2"></i>
+                                <span class="text-sm">Chapéus de Pele</span>
+                            </div>
+                            <div class="bg-gray-200 p-2 rounded-lg flex flex-col items-center">
+                                <i class="fas fa-bone text-4xl text-gray-700 mb-2"></i>
+                                <span class="text-sm">Adornos Ósseos</span>
+                            </div>
+                            <div class="bg-gray-200 p-2 rounded-lg flex flex-col items-center">
+                                <i class="fas fa-tshirt text-4xl text-gray-700 mb-2"></i>
+                                <span class="text-sm">Peles de Animal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content hidden" id="recruitment">
+            <section class="bg-white bg-opacity-80 p-6 rounded-lg shadow-lg">
+                <h2 class="title-font text-2xl md:text-3xl mb-6 blood-red">Processo de Recrutamento</h2>
+                <div class="space-y-8">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="bg-red-800 text-white rounded-full w-16 h-16 flex items-center justify-center shrink-0">
+                            <span class="title-font text-2xl">1</span>
+                        </div>
+                        <div>
+                            <h3 class="title-font text-xl blood-red mb-2">A Caçada Nua</h3>
+                            <p class="body-font text-lg">
+                                O candidato deve caçar múltiplos animais grandes nas terras geladas, sem roupas, e retornar com uma quantidade substancial de carne. Seguido por um ritual de iniciação.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="bg-red-800 text-white rounded-full w-16 h-16 flex items-center justify-center shrink-0">
+                            <span class="title-font text-2xl">2</span>
+                        </div>
+                        <div>
+                            <h3 class="title-font text-xl blood-red mb-2">O Duelo de Força</h3>
+                            <p class="body-font text-lg">
+                                O candidato deve desafiar e derrotar um guerreiro Dolmur estabelecido em combate ritualístico. Seguido por um ritual de iniciação.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="bg-red-800 text-white rounded-full w-16 h-16 flex items-center justify-center shrink-0">
+                            <span class="title-font text-2xl">3</span>
+                        </div>
+                        <div>
+                            <h3 class="title-font text-xl blood-red mb-2">A Prova de Habilidade</h3>
+                            <p class="body-font text-lg">
+                                O candidato deve convencer um Xamã ou Chefe de Guerra de que possui habilidades únicas e úteis para a tribo (rastreamento, conhecimento de plantas, etc.). Seguido por um ritual de iniciação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content hidden" id="relations">
+            <section class="bg-white bg-opacity-80 p-6 rounded-lg shadow-lg">
+                <h2 class="title-font text-2xl md:text-3xl mb-6 blood-red">Relações com Outras Facções</h2>
+                <div class="body-font text-lg space-y-4">
+                    <p>
+                        Os Dolmurs são geralmente hostis ou, na melhor das hipóteses, desconfiados de todas as outras facções. Veem forasteiros como fracos, desonestos e uma ameaça potencial aos seus territórios e recursos.
+                    </p>
+                    <p>
+                        Ocasionalmente, podem ser persuadidos a trocar peles raras ou conhecimento limitado sobre Nornheim, mas tais interações são tensas e perigosas.
+                    </p>
+                </div>
+                
+                <div class="mt-8 grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-100 p-4 rounded-lg border-t-4 border-red-300">
+                        <h3 class="title-font text-lg blood-red mb-2">Facção A</h3>
+                        <p class="body-font">
+                            Relação extremamente hostil. Os Dolmurs veem esta facção como bruxos perigosos.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg border-t-4 border-yellow-300">
+                        <h3 class="title-font text-lg blood-red mb-2">Facção B</h3>
+                        <p class="body-font">
+                            Relação de desconfiança mútua, mas ocasionalmente negociam peles por armas.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg border-t-4 border-green-300">
+                        <h3 class="title-font text-lg blood-red mb-2">Facção C</h3>
+                        <p class="body-font">
+                            Relação menos hostil, pois respeitam a força física desta facção.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="title-font text-xl blood-red">Wiki Medieval RP</h3>
+                    <p class="body-font text-gray-400">O conhecimento de Nornheim em suas mãos</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-discord text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-steam text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fas fa-book text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 body-font">
+                <p>© 2023 Medieval RP - Garry's Mod. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('border-red-800', 'font-medium');
+                    btn.classList.add('text-gray-600');
+                });
+                
+                // Add active class to clicked button
+                button.classList.add('border-red-800', 'font-medium');
+                button.classList.remove('text-gray-600');
+                
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                // Show selected tab content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
